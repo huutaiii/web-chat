@@ -1,0 +1,25 @@
+
+head
+	title uhhhh
+	meta(name='viewport' content='width=device-width, initial-scale=1.0')
+	script(src='https://www.google.com/recaptcha/api.js' async defer)
+	style. 
+		body {font-family: Helvetica, Arial}
+body
+	if username
+		a(href='/uhh'): button #{username}
+	form(name='login' method='post')
+		| password: 
+		input(type='password' name='passwd' value=saved_passwd)
+		|  #{info_passwd}
+		br
+		| name: 
+		input(type='text' name='name' value=saved_name)
+		|  #{info_name}
+		br
+		if info_captcha
+			div#recaptcha-container(style='padding-left: 1px; border-left: 3px solid red; font-size: 12px; color: red')
+				div.g-recaptcha(data-sitekey=sitekey)
+		else
+			div.g-recaptcha(data-sitekey=sitekey)
+		input(type='submit' value='submit')

@@ -1,0 +1,15 @@
+head
+	title chat
+	meta(name='viewport' content='width=device-width, initial-scale=1.0')
+	style.
+		!{css}
+body
+	ul(id='top-bar')
+		li(id='username')
+	ul(id='messages')
+	div(id='input-field')
+		input(id='m' autofocus onkeydown='if (event.keyCode == 13) submit()')
+		button(onclick='submit()') send
+	script(src='/socket.io/socket.io.js')
+	script.
+		!{js}

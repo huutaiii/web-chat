@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>aaaaaaaaa</title>
+</head>
+<body id="body">
+	<h1>welcome to my useless website</h1>
+	<p>there isn't anything here (yet, maybe). please leave.</p>
+	<button id="button" onclick="button_click()">here's a button</button>
+	<script type="text/javascript">
+		var clicks = 0;
+		var h = 0
+		function button_click() {
+			++clicks
+			if (clicks > 2) {
+				document.querySelector("#button").innerHTML = "please stop"
+			}
+			setInterval(function() {
+				document.querySelector("#body").style.backgroundColor = "hsl(" + (h++) + ",100%, 50%)"
+			}, 6)
+		}
+	</script>
+</body>
+</html>
